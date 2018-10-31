@@ -95,7 +95,8 @@
 ## Ch01 - 我的第1個jQuery
 * Import jQuery
   * Download jQuery [v3.3.1](https://code.jquery.com/jquery-3.3.1.min.js)
-  * 使用以下程式碼將jquery.js匯入
+  * 滑鼠點擊右鍵 &gt; 另存新檔
+  * 使用以下的程式碼將jquery.js匯入
   
         <script src="存放jquery.js的資料夾名稱/jquery-3.3.1.min.js"></script>
   
