@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!--串聯-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>串聯</title>
+        <style type="text/css">
+            .blue{
+                color: blue;
+            }
+
+            .red{
+                color: red;
+            }
+        </style>
+        <!-- Import jQuery.js -->
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   因為jQuery函數的回傳值是jQuery物件本身，
+                   可以使用串聯的方式來依序呼叫多個函數。
+                */
+                $("#list li:last").addClass("blue").prev().removeClass("red");
+            });
+        </script>
+    </head>
+    <body>
+        <h2>串聯</h2>
+        <hr>
+        <ol id="list">
+            <li>JavaServer Pages</li>
+            <li>JavaScript</li>
+            <li>VBScript</li>
+            <li>HTML</li>
+        </ol>
+    </body>
+</html>

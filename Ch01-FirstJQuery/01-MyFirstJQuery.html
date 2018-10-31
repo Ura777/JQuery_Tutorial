@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--我的第1個jQuery-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>我的第1個jQuery</title>
+        <style type="text/css">
+            .blue{
+                color: blue;
+            }
+
+            .red{
+                color: red;
+            }
+        </style>
+        <!-- Import jQuery.js -->
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            /*
+               $是jQuery物件的別名，也是JavaScript特殊的變數名稱。
+               $()函數是呼叫建構函數建立jQuery物件。
+               參數document是指HTML網頁本身，然後註冊ready事件。
+               ready的()內放的是事件處理程式碼。
+            */
+            $(document).ready(function(){
+                /*
+                   jQuery程式敘述的基本語法是呼叫jQuery()函數，或是別名$()函數：
+                   jQuery(選擇器字串).method(參數);
+                   $(選擇器字串).method(參數);
+                */
+                $("#list").addClass("red");
+                $("#list li:last").addClass("blue");
+            });
+        </script>
+    </head>
+    <body>
+        <h2>我的第1個jQuery</h2>
+        <hr>
+        <ol id="list">
+            <li>JavaServer Pages</li>
+            <li>JavaScript</li>
+            <li>VBScript</li>
+            <li>HTML</li>
+        </ol>
+    </body>
+</html>
