@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--所有元素都套用樣式-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>所有元素都套用樣式</title>
+        <style type="text/css">
+            .green{
+                color: green;
+            }
+        </style>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   將所有元素都套用.green的樣式
+                */
+                $("*").addClass("green");
+            });
+        </script>
+    </head>
+    <body>
+        <h2>所有元素都套用樣式</h2>
+        <hr>
+        <p>
+            ▇▇常見的候鳥資料如下：
+        </p>
+        <dl>
+            <dt>黑面琵鷺</dt>
+                <dd>
+                    黑面琵鷺最早的棲息地是▇▇及▇▇的▇▇▇▇，但近年來他們覓著了一個新的棲息地，那就是▇▇▇▇的▇▇▇▇▇▇。
+                </dd>
+            <dt>赤腹鷹</dt>
+                <dd>
+                    赤腹鷹的棲息地在▇▇、▇▇一帶，只要一到每年的▇、▇月，赤腹鷹就會成群結隊的到▇▇過冬，愛鷹的人士可千萬不能錯過。
+                </dd>
+        </dl>
+    </body>
+</html>

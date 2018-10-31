@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--新增DOM元素-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>新增DOM元素</title>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   appendTo會將新增的「<p>我是新增的段落！</p>」新增至body的最後1個子元素。
+                */
+                $("button").click(function(){
+                    $("<p>我是新增的段落！</p>").appendTo("body");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>新增DOM元素</h2>
+        <hr>
+        <button>新增新的段落</button>
+        <p>
+            ▇▇常見的候鳥資料如下：
+        </p>
+        <dl>
+            <dt>黑面琵鷺</dt>
+                <dd>
+                    黑面琵鷺最早的棲息地是▇▇及▇▇的▇▇▇▇，但近年來他們覓著了一個新的棲息地，那就是▇▇▇▇的▇▇▇▇▇▇。
+                </dd>
+            <dt>赤腹鷹</dt>
+                <dd>
+                    赤腹鷹的棲息地在▇▇、▇▇一帶，只要一到每年的▇、▇月，赤腹鷹就會成群結隊的到▇▇過冬，愛鷹的人士可千萬不能錯過。
+                </dd>
+        </dl>
+    </body>
+</html>

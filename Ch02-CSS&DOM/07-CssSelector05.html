@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--CSS選擇器的綜合範例-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>CSS選擇器的綜合範例</title>
+        <style type="text/css">
+            .red{
+                color: red;
+            }
+            .green{
+                color: green;
+            }
+            .blue{
+                color: blue;
+            }
+            .line{
+                border: 1px solid #333;
+            }
+        </style>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("*").addClass("line");
+                $("p").addClass("blue");
+                $("#list").addClass("red");
+                $(".item").addClass("green");
+            });
+        </script>
+    </head>
+    <body>
+        <h2>CSS選擇器的綜合範例</h2>
+        <hr>
+        <p>JavaScript網頁設計</p>
+        <p>jQuery網頁設計</p>
+        <ol id="list">
+            <li class="item">jQuery</li>
+            <li>Prototype</li>
+            <li class="item">MooTools</li>
+            <li>DOJO</li>
+        </ol>
+    </body>
+</html>
