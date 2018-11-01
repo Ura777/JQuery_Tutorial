@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--設定指定元素的CSS-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>設定指定元素的CSS</title>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   使用css()來設定指定元素的CSS。
+                   參數為("CSS樣式屬性名稱","CSS樣式屬性值")。
+                */
+                $("h2").css("background-color", "aquamarine");
+
+                /*
+                   也可以一次設定多個CSS樣式。
+                   樣式之間使用逗號隔開。
+                */
+                $("dt").css({
+                    "background-color": "bisque",
+                    "color": "#0000FF",
+                    "font-size": "12pt",
+                    "line-height": "2.5em"
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h2>設定指定元素的CSS</h2>
+        <hr>
+        <p>
+            ▇▇常見的候鳥資料如下：
+       </p>
+       <dl>
+           <dt>黑面琵鷺</dt>
+               <dd>
+                   黑面琵鷺最早的棲息地是▇▇及▇▇的▇▇▇▇，但近年來他們覓著了一個新的棲息地，那就是▇▇▇▇的▇▇▇▇▇▇。
+               </dd>
+           <dt>赤腹鷹</dt>
+               <dd>
+                   赤腹鷹的棲息地在▇▇、▇▇一帶，只要一到每年的▇、▇月，赤腹鷹就會成群結隊的到▇▇過冬，愛鷹的人士可千萬不能錯過。
+               </dd>
+            <dt>八色鳥</dt>
+               <dd>
+                八色鳥在每年的▇▇就會從▇▇▇地區飛到▇▇繁殖下一代，由於羽色艷麗（八種色彩），可以說是山林中的漂亮寶貝。
+               </dd>
+       </dl>
+    </body>
+</html>

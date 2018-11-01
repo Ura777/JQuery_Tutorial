@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--屬性選擇器-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>選擇包含指定網址的超連結</title>
+        <style type="text/css">
+            .bgColor{
+                background-color: aquamarine;
+            }
+        </style>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   屬性選擇器是使用正規運算式(Regular Expression)的符號來找到目標。
+                   字串符號 -> *
+                   開頭字串符號 -> ^
+                   結尾字串 -> $
+
+                   *= -> 表示只需要包含等號後面的值就算是符合條件
+                */
+                $("ul li a[href*='.tw']").addClass("bgColor");
+            });
+        </script>
+    </head>
+    <body>
+        <h2 id="title">選擇包含指定網址的超連結</h2>
+        <hr>
+        <p>網站清單如下：</p>
+        <ul>
+            <li>
+                <a href="https://tw.yahoo.com/" target="_blank">
+                    Yahoo!
+                </a>
+            </li>
+            <li>
+                <a href="https://www.google.com.tw/" target="_blank">
+                    Google
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                    Facebook
+                </a>
+            </li>
+        </ul>
+        <p>額外追加網站：</p>
+        <p>
+            <a href="https://www.cwb.gov.tw/V7/" target="_blank">中央氣象局全球資訊網</a>
+        </p>
+    </body>
+</html>

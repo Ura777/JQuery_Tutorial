@@ -6,6 +6,7 @@
 * [課程介紹](https://github.com/Ura777/JQuery_Tutorial#%E8%AA%B2%E7%A8%8B%E4%BB%8B%E7%B4%B9)
   * [Ch00 - Tomcat的管理](https://github.com/Ura777/JQuery_Tutorial#ch00---tomcat%E7%9A%84%E7%AE%A1%E7%90%86)
   * [Ch01 - 我的第1個jQuery](https://github.com/Ura777/JQuery_Tutorial#ch01---%E6%88%91%E7%9A%84%E7%AC%AC1%E5%80%8Bjquery)
+  * [Ch02 - CSS&DOM]()
 * * *
 ## 環境設置
 * 作業系統 = Windows 7
@@ -106,4 +107,88 @@
   * jQuery依序呼叫多個函數
 * 回撥函數 Callback Function
   * jQueyr的動畫效果都是使用此來達成
+* * *
+## Ch02 - CSS&DOM
+* 新增DOM元素
+  * 新增後會成為最後1個子元素
+  * appendTo()
+* 指定DOM元素套用CSS樣式
+  * addClass();
+* 所有元素都套用CSS樣式
+  * 選擇器的部分填寫"*"
+* 使用ID屬性來選擇元素
+* 使用Class屬性來選擇元素
+* 使用多個Class屬性來選擇元素
+* 使用巢狀Class屬性來選擇元素
+  * 選擇器寫法說明如下：
+ 
+        父元素是div，子元素是p。
+        例如："div p"
+ 
+        父元素是div的p子元素。
+        例如："div > p"
+
+        緊接著div元素之後的span兄弟元素。
+        例如："div + span"
+ 
+* 同時選擇多種不同的元素
+  * 使用逗號來隔開選擇器
+  * 可以使用組合HTML Tag名稱與class屬性、id屬性，來選擇特定的元素。
+* 篩選選擇器Even & Odd
+  * 篩選符號是「:」，「:」之後的就是篩選屬性。
+  * 可以用來完成表格的斑馬樣式
+* 篩選選擇器First & Last
+* 篩選選擇器Has & Empty
+  * has(指定元素) -&gt; 只要有指定元素就好，不一定需要是直接子元素。
+  * empty -> 符合選擇器所指定而且沒有任何內容的空元素
+* 篩選選擇器Contains
+  * contains('指定字串') -&gt; 篩選出包含指定字串內容的元素。
+* 屬性選擇器 - 選擇包含指定網址的超連結
+  * 屬性選擇器是使用正規運算式(Regular Expression)的符號來找到目標。
+  * 字串符號 -&gt; *
+  * 開頭字串符號 -&gt; ^
+  * 結尾字串 -&gt; $
+  * *= -&gt; 表示只需要包含等號後面的值就算是符合條件
+* 屬性選擇器 - 選擇ID屬性值是特定開頭或結尾的元素
+  * $= -&gt; 表示只需要結尾是等號後面的值就算是符合條件
+* 讀取指定元素的CSS
+  * css()
+  * 參數為CSS樣式屬性名稱，例如：color、font-size。
+* 設定指定元素的CSS
+  * css()
+  * 參數為("CSS樣式屬性名稱","CSS樣式屬性值")。
+  * 也可以一次設定多個CSS樣式，樣式之間使用「,」隔開。
+* 新增指定元素的CSS
+  * addClass()
+  * 參數為CSS樣式選擇器名稱
+* 移除指定元素的CSS
+  * removeClass()
+  * 沒有參數時，移除所有的CSS。
+  * 有參數時，移除特定的CSS。
+  * 可以一次移除多個CSS，CSS之間用1個半形的空白字元分隔。
+* 新增或移除指定元素的CSS
+  * toggleClass()
+  * 當指定的元素沒有套用指定的CSS時，就會套用。
+  * 當指定的元素已經套用指定的CSS時，就會移除。
+* 取代DOM子元素
+  * html()是取代成另外一個HTML子元素
+  * text()是取代文字內容
+* 新增DOM子元素
+  * prepend()是新增成為第1個子元素
+  * append()是新增成為最後1個子元素
+* 插入DOM子元素
+  * before()是在指定的元素前面插入兄弟元素。
+  * after()是在指定的元素後面插入兄弟元素。
+* 移除DOM子元素
+  * remove()
+* 取得被包裝在jQuery物件的DOM元素個數
+  * 使用.length取得
+* 直接存取DOM元素
+  * 對於取回的jQuery物件，因為被包裝的DOM元素可能不只1個。
+  * 使用get()來取出指定的DOM元素
+  * 參數為index，從0開始。
+  * 也可以使用類似陣列所以方式來取得DOM元素
+  * .textContent屬性可以取得指定DOM元素的文字內容
+* * *
+
 

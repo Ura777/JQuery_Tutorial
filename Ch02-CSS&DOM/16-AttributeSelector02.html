@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--屬性選擇器-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>選擇ID屬性值是特定開頭或結尾的元素</title>
+        <style type="text/css">
+            .red{
+                color: red;
+            }
+            .blue{
+                color: blue;
+            }
+        </style>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   屬性選擇器是使用正規運算式(Regular Expression)的符號來找到目標。
+                   字串符號 -> *
+                   開頭字串符號 -> ^
+                   結尾字串 -> $
+
+                   ^= -> 表示只需要開頭是等號後面的值就算是符合條件
+                   $= -> 表示只需要結尾是等號後面的值就算是符合條件
+                */
+                $("dt[id^='bird']").addClass("red");
+                $("dd[id$='data']").addClass("blue");
+            });
+        </script>
+    </head>
+    <body>
+        <h2 id="title">選擇ID屬性值是特定開頭或結尾的元素</h2>
+        <hr>
+        <p id="introduce">
+            ▇▇常見的候鳥資料如下：
+       </p>
+       <dl>
+           <dt id="bird_title01">黑面琵鷺</dt>
+               <dd id="bird01_data">
+                   黑面琵鷺最早的棲息地是▇▇及▇▇的▇▇▇▇，但近年來他們覓著了一個新的棲息地，那就是▇▇▇▇的▇▇▇▇▇▇。
+               </dd>
+           <dt id="bird_title02">赤腹鷹</dt>
+               <dd id="bird02_data">
+                   赤腹鷹的棲息地在▇▇、▇▇一帶，只要一到每年的▇、▇月，赤腹鷹就會成群結隊的到▇▇過冬，愛鷹的人士可千萬不能錯過。
+               </dd>
+            <dt id="03bird_title">八色鳥</dt>
+               <dd id="bird_data03">
+                八色鳥在每年的▇▇就會從▇▇▇地區飛到▇▇繁殖下一代，由於羽色艷麗（八種色彩），可以說是山林中的漂亮寶貝。
+               </dd>
+       </dl>
+    </body>
+</html>

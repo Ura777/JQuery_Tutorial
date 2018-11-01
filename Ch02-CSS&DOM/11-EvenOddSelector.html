@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--篩選選擇器Even & Odd-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>篩選選擇器Even & Odd</title>
+        <style type="text/css">
+            table{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, tr, td{
+                border: 1px solid black;
+                text-align: center;
+                padding: 10px;
+            }
+            .even{
+                background-color: aquamarine;
+            }
+            .odd{
+                background-color: bisque;
+            }
+        </style>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   篩選符號是冒號，冒號之後的就是篩選屬性。
+                */
+                $("tr:even").addClass("even");
+                $("tr:odd").addClass("odd");
+            });
+        </script>
+    </head>
+    <body>
+        <h2 id="title">篩選選擇器Even & Odd</h2>
+        <hr>
+        <table>
+            <tr>
+                <th>人員編號</th>
+                <th>姓名</th>
+                <th>安全權限等級</th>
+                <th>工作站點</th>
+            </tr>
+            <tr>
+                <td>D-0001</td>
+                <td>D級人員01</td>
+                <td>0級</td>
+                <td>Site 117</td>
+            </tr>
+            <tr>
+                <td>B-0001</td>
+                <td>Dr.Roman</td>
+                <td>4級</td>
+                <td>Site 666</td>
+            </tr>
+            <tr>
+                <td>▇-▇▇▇▇</td>
+                <td>▇▇▇▇▇</td>
+                <td>5級</td>
+                <td>O5議會</td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--篩選選擇器Contains-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>篩選選擇器Contains</title>
+        <style type="text/css">
+            table{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th, tr, td{
+                border: 1px solid black;
+                text-align: center;
+                padding: 10px;
+            }
+            .even{
+                background-color: aquamarine;
+            }
+            .odd{
+                background-color: bisque;
+            }
+            .red{
+                color: red;
+            }
+        </style>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   contains('級') -> 篩選出包含「級」這個字串內容的元素。
+                */
+                $("td:contains('級')").addClass("red");
+            });
+        </script>
+    </head>
+    <body>
+        <h2 id="title">篩選選擇器Contains</h2>
+        <hr>
+        <table>
+            <tr>
+                <th>人員編號</th>
+                <th>姓名</th>
+                <th>安全權限等級</th>
+                <th>工作站點</th>
+            </tr>
+            <tr>
+                <td>D-0001</td>
+                <td>D級人員01</td>
+                <td>0級</td>
+                <td>Site 117</td>
+            </tr>
+            <tr>
+                <td>B-0001</td>
+                <td>Dr.Roman</td>
+                <td>4級</td>
+                <td>Site 666</td>
+            </tr>
+            <tr>
+                <td>▇-▇▇▇▇</td>
+                <td>▇▇▇▇▇</td>
+                <td>5級</td>
+                <td>O5議會</td>
+            </tr>
+        </table>
+    </body>
+</html>

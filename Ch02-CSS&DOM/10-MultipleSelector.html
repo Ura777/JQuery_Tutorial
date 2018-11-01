@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--同時選擇多種不同的元素-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>同時選擇多種不同的元素</title>
+        <style type="text/css">
+            .blue{
+                color: blue;
+            }
+            .red{
+                color: red;
+            }
+            .green{
+                color: green;
+            }
+        </style>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   使用逗號來隔開選擇器。
+                   可以使用組合HTML Tag名稱與class屬性、id屬性，來選擇特定的元素。
+                */
+                $("#title, .bird_title").addClass("blue");
+                $("dd#bird_data01").addClass("green");
+                $("#introduce, .bird_data").addClass("red");
+            });
+        </script>
+    </head>
+    <body>
+        <h2 id="title">同時選擇多種不同的元素</h2>
+        <hr>
+        <p id="introduce">
+            ▇▇常見的候鳥資料如下：
+       </p>
+       <dl>
+           <dt class="bird_title">黑面琵鷺</dt>
+               <dd id="bird_data01">
+                   黑面琵鷺最早的棲息地是▇▇及▇▇的▇▇▇▇，但近年來他們覓著了一個新的棲息地，那就是▇▇▇▇的▇▇▇▇▇▇。
+               </dd>
+           <dt class="bird_title">赤腹鷹</dt>
+               <dd class="bird_data">
+                   赤腹鷹的棲息地在▇▇、▇▇一帶，只要一到每年的▇、▇月，赤腹鷹就會成群結隊的到▇▇過冬，愛鷹的人士可千萬不能錯過。
+               </dd>
+       </dl>
+    </body>
+</html>

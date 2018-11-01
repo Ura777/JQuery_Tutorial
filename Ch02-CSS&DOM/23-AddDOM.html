@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--新增DOM子元素-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>新增第1個或最後1個DOM子元素</title>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                    prepend()是新增成為第1個子元素。
+                    append()是新增成為最後1個子元素。
+                */
+                $("body").prepend("<p>我被新增到第1個！</p>");
+                $("body").append("<p>我被新增到最後1個！</p>");
+            });
+        </script>
+    </head>
+    <body>
+        <h2>新增第1個或最後1個DOM子元素</h2>
+        <hr>
+        <p>我只是其中1個DOM子元素</p>
+    </body>
+</html>

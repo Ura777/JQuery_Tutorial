@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--直接存取DOM元素-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>直接存取DOM元素</title>
+        <script src="jQuery/jquery-3.3.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                /*
+                   對於取回的jQuery物件，因為被包裝的DOM元素可能不只1個。
+                   使用get()來取出指定的DOM元素。
+                   參數為index，從0開始。
+
+                   也可以使用類似陣列所以方式來取得DOM元素。
+
+                   .textContent屬性可以取得指定DOM元素的文字內容。
+                */
+                var ddFirstText = $("dd").get(0).textContent;
+                var dtSecondText = $("dt")[1].textContent;
+                var message = "dd標籤的第1個內容：\n" + ddFirstText + "\n";
+                message+="dt標籤的第2個內容：\n" + dtSecondText + "\n";
+                alert(message);
+            });
+        </script>
+    </head>
+    <body>
+        <h2>直接存取DOM元素</h2>
+        <hr>
+        <p>
+            ▇▇常見的候鳥資料如下：
+       </p>
+       <dl>
+           <dt>黑面琵鷺</dt>
+               <dd>
+                   黑面琵鷺最早的棲息地是▇▇及▇▇的▇▇▇▇，但近年來他們覓著了一個新的棲息地，那就是▇▇▇▇的▇▇▇▇▇▇。
+               </dd>
+           <dt>赤腹鷹</dt>
+               <dd>
+                   赤腹鷹的棲息地在▇▇、▇▇一帶，只要一到每年的▇、▇月，赤腹鷹就會成群結隊的到▇▇過冬，愛鷹的人士可千萬不能錯過。
+               </dd>
+            <dt>八色鳥</dt>
+               <dd>
+                八色鳥在每年的▇▇就會從▇▇▇地區飛到▇▇繁殖下一代，由於羽色艷麗（八種色彩），可以說是山林中的漂亮寶貝。
+               </dd>
+       </dl>
+    </body>
+</html>
